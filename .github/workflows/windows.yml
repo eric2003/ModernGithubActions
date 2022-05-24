@@ -34,5 +34,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo $PATH
+          $env:$PATH
           cmake --version
           git version
+        shell: pwsh
