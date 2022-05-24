@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Windows-PWD-CI
+name: Windows-Logicaldisk-CI
 
 # Controls when the workflow will run
 on:
@@ -34,3 +34,10 @@ jobs:
           write-output "get-wmiobject -class win32_logicaldisk"
           get-wmiobject -class win32_logicaldisk
         shell: pwsh
+      - name: ls disk Info
+        run: |
+          write-output "ls c:/"
+          ls c:/
+          write-output "ls d:/"
+          ls d:/
+        shell: pwsh        
