@@ -29,5 +29,5 @@ jobs:
 
       - name: Show Environment variables Info
         run: |
-          write-output "VS_VER = ${VS_VER}"
+          write-output "VS_VER = $VS_VER"
         shell: pwsh
