@@ -44,7 +44,7 @@ jobs:
       - name: ls Program Files Info
         run: |
           write-output "ls c:/Program Files (x86)/"
-          ls c:/Program Files (x86)/
+          ls "c:/Program Files (x86)/"
           write-output "ls c:/Program Files/"
-          ls c:/Program Files/
+          ls "c:/Program Files/"
         shell: pwsh  
