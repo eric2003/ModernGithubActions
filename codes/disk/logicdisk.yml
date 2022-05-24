@@ -1,0 +1,55 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Windows-Logicaldisk-CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    name: "Windows Actions"
+    # The type of runner that the job will run on
+    runs-on: windows-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      # Runs a set of commands using the runners shell
+      - name: Logicaldisk Info
+        run: |
+          write-output "pwd"
+          pwd
+          write-output "get-wmiobject -class win32_logicaldisk"
+          get-wmiobject -class win32_logicaldisk
+        shell: pwsh
+      - name: ls disk Info
+        run: |
+          write-output "ls c:/"
+          ls c:/
+          write-output "ls d:/"
+          ls d:/
+        shell: pwsh
+      - name: ls Program Files Info
+        run: |
+          write-output "ls c:/Program Files (x86)/"
+          ls "c:/Program Files (x86)/"
+          write-output "ls c:/Program Files/"
+          ls "c:/Program Files/"
+        shell: pwsh
+      - name: ls C:/Program Files/Microsoft Visual Studio/ Info
+        run: |
+          write-output "ls C:/Program Files/Microsoft Visual Studio/"
+          ls "C:/Program Files/Microsoft Visual Studio/"
+        shell: pwsh
