@@ -31,4 +31,6 @@ jobs:
         run: |
           write-output "pwd"
           pwd
+          write-output "Get-PSDrive"
+          Get-PSDrive
         shell: pwsh
