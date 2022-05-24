@@ -37,4 +37,5 @@ jobs:
           write-output ${env:PATH}
           cmake --version
           git version
+          dotnet --list-runtimes
         shell: pwsh
