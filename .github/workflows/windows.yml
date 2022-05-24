@@ -39,4 +39,6 @@ jobs:
           git version
           dotnet --list-runtimes
           dotnet --info
+          write-output "Get-CimInstance MSFT_VSInstance"
+          Get-CimInstance MSFT_VSInstance
         shell: pwsh
