@@ -65,5 +65,9 @@ jobs:
         write-output "ls C:/Program Files (x86)/"
         ls "C:/Program Files (x86)/"
         write-output "ls C:/Program Files/"
-        ls "C:/Program Files/"      
+        ls "C:/Program Files/"
+        write-output "ls C:/Program Files (x86)/Intel/"
+        ls "C:/Program Files (x86)/Intel/"
+        write-output "ls C:/Program Files (x86)/Intel/oneAPI/"
+        ls "C:/Program Files (x86)/Intel/oneAPI/"        
 
